@@ -1,0 +1,54 @@
+
+body 
+{
+    margin:0;
+    padding:0;
+    height:100vh;
+    width:100vw;
+    background-color: tan;
+}
+
+h1, h2, h3{
+text-align:center;
+    color: brown;
+
+}
+
+.rutenett 
+{
+    margin-left:auto;
+    margin-right:auto;
+    height:50vh;
+    width:50vw;
+    background-color:pink;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 'rute0 rute1 rute2'
+        'rute3 rute4 rute5' 'rute6 rute7 rute8';
+}
+
+.mads 
+{
+    height: 415px;
+    width: 298px;
+    background-image: url('mads.png');
+    background-repeat:no-repeat;
+}
+
+.ruteA, .ruteB
+{
+    box-sizing:border-box;
+    border: solid black 3px;
+}
+
+.ruteA 
+{
+    background-color: darkseagreen;
+}
+
+.diskoKnapp{
+    height:100px;
+    width:100px;
+    margin-left:px;
+}
