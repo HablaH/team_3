@@ -11,7 +11,6 @@ body
 h1, h2, h3{
 text-align:center;
     color: brown;
-
 }
 
 .rutenett 
@@ -27,19 +26,21 @@ text-align:center;
     grid-template-areas: 'rute0 rute1 rute2'
         'rute3 rute4 rute5' 'rute6 rute7 rute8';
 }
-
-.mads 
+.art 
 {
+    
+}
+.mads {
     left: 75%;
-    top: 40%;
-    height: 415px;
-    width: 298px;
+    top: 10%;
+    height: 100%;
+    width: 100%;
     background-image: url('mads.png');
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
 }
 
 .seline {
-    left:50%;
+    left: 50%;
     height: 415px;
     width: 298px;
     background-image: url('seline.png');
@@ -47,8 +48,11 @@ text-align:center;
 }
 
 .harald {
-    height: 415px;
-    width: 298px;
+    left: 30%;
+    top: 40%;
+    height: 256px;
+    width: 128px;
+    background-size: 100%;
     background-image: url('harald.png');
     background-repeat: no-repeat;
 }
@@ -61,6 +65,14 @@ text-align:center;
     background-repeat: no-repeat;
 }
 
+.ayla {
+    top: 20%;
+    left: 10%;
+    height: 100%;
+    width: 100%;
+    background-image: url('ayla.png');
+    background-repeat: no-repeat;
+}
 .ruteA, .ruteB
 {
     box-sizing:border-box;
@@ -75,5 +87,6 @@ text-align:center;
 .diskoKnapp{
     height:100px;
     width:100px;
-    margin-left:px;
+    margin:auto;
+    
 }

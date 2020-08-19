@@ -17,35 +17,39 @@
 </head>
 
 <body>
-    <h1>TeamOppgave</h1>
+    <h1>Team Oppgave</h1>
     <h2>Her er ett rutenett med en liten bonus</h2>
     <h3>
         klikk på en rute for å endre til tilfeldig farge <br />
         klikk "DISKO!" for en overraskelse
     </h3>
 
-    <div class="rutenett" style="position:relative">
-        <div class="dj" style="position:absolute"></div>
-        <div class="mads" style="position:absolute"></div>
-        <div class="seline" style="position:absolute"></div>
-        <div class="harald" style="position:absolute"></div>
-        <div class="rute0, ruteA" id="0" onclick="RandomColor(this)"></div>
-        <div class="rute1, ruteB" id="1" onclick="RandomColor(this)"></div>
-        <div class="rute2, ruteA" id="2" onclick="RandomColor(this)"></div>
-        <div class="rute3, ruteB" id="3" onclick="RandomColor(this)"></div>
-        <div class="rute4, ruteA" id="4" onclick="RandomColor(this)"></div>
-        <div class="rute5, ruteB" id="5" onclick="RandomColor(this)"></div>
-        <div class="rute6, ruteA" id="6" onclick="RandomColor(this)"></div>
-        <div class="rute7, ruteB" id="7" onclick="RandomColor(this)"></div>
-        <div class="rute8, ruteA" id="8" onclick="RandomColor(this)"></div>
+    <div class="rutenett" style="position:relative;">
+
+        <div class="rute0 ruteA" id="0" onclick="RandomColor(this)"></div>
+        <div class="rute1 ruteB" id="1" onclick="RandomColor(this)"></div>
+        <div class="rute2 ruteA" id="2" onclick="RandomColor(this)"></div>
+        <div class="rute3 ruteB" id="3" onclick="RandomColor(this)"></div>
+        <div class="rute4 ruteA" id="4" onclick="RandomColor(this)"></div>
+        <div class="rute5 ruteB" id="5" onclick="RandomColor(this)"></div>
+        <div class="rute6 ruteA" id="6" onclick="RandomColor(this)"></div>
+        <div class="rute7 ruteB" id="7" onclick="RandomColor(this)"></div>
+        <div class="rute8 ruteA" id="8" onclick="RandomColor(this)"></div>
+        <div id="art" style="position:absolute; opacity:0; height: 100%; width:100%;">
+            <div class="dj" style="position:absolute"></div>
+            <div id="ayla" class="ayla" style="position:absolute"></div>
+            <div id="mads" class="mads" style="position:absolute"></div>
+            <div id="seline" class="seline" style="position:absolute"></div>
+            <div id="harald" class="harald" style="position:absolute"></div>
+        </div>
     </div>
 
 
     <div>
         <button class="diskoKnapp" onclick="diskoToggle()">DISKO!</button>
     </div>
-    <div>
-        <audio controls>
+    <div style="display:none">
+        <audio controls id="music">
             <source src="disco.mp3" type="audio/mp3">
         </audio>
     </div>
