@@ -30,10 +30,26 @@ text-align:center;
 
 .mads 
 {
+    float:left;
     height: 415px;
     width: 298px;
     background-image: url('mads.png');
     background-repeat:no-repeat;
+}
+
+.seline {
+    height: 415px;
+    width: 298px;
+    background-image: url('seline.png');
+    background-repeat: no-repeat;
+}
+
+.dj {
+    float: right;
+    height: 256px;
+    width: 129px;
+    background-image: url('dj.png');
+    background-repeat: no-repeat;
 }
 
 .ruteA, .ruteB
