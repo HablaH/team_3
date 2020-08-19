@@ -30,7 +30,7 @@ text-align:center;
 
 .mads 
 {
-    float:left;
+    position: 40 40;
     height: 415px;
     width: 298px;
     background-image: url('mads.png');
@@ -44,10 +44,16 @@ text-align:center;
     background-repeat: no-repeat;
 }
 
+.harald {
+    height: 415px;
+    width: 298px;
+    background-image: url('harald.png');
+    background-repeat: no-repeat;
+}
+
 .dj {
-    float: right;
-    height: 256px;
-    width: 129px;
+    height: 128px;
+    width: 256px;
     background-image: url('dj.png');
     background-repeat: no-repeat;
 }
