@@ -37,6 +37,37 @@ text-align:center;
     width: 100%;
     background-image: url('mads.png');
     background-repeat: no-repeat;
+    animation-name:mads;
+    animation-duration:12s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    animation-timing-function: linear;
+}
+@keyframes mads 
+{
+    0% 
+    {
+        left:75%;
+        top:10%;
+    }
+
+    25% 
+    {
+        left: 80%;
+        top: 15%;
+    }
+
+    50% 
+    {
+        left: 20%;
+        top: 50%;
+    }
+
+    100% 
+    {
+        left:50%;
+        top:5%;
+    }
 }
 
 .seline {
@@ -45,7 +76,34 @@ text-align:center;
     width: 298px;
     background-image: url('seline.png');
     background-repeat: no-repeat;
+    animation-name:seline;
+    animation-duration:2s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
 }
+@keyframes seline {
+    0% {
+        left: 20%;
+        top: 10%;
+    }
+
+    25% {
+        left: 30%;
+        top: 15%;
+    }
+
+    50% {
+        left: 20%;
+        top: 45%;
+    }
+
+    100% {
+        left: 20%;
+        top: 5%;
+    }
+}
+
+
 
 .harald {
     left: 30%;
@@ -55,6 +113,52 @@ text-align:center;
     background-size: 100%;
     background-image: url('harald.png');
     background-repeat: no-repeat;
+    animation-name: harald;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function:cubic-bezier(.57,.94,.93,.09)
+}
+@keyframes harald {
+    0% {
+        left: 75%;
+        top: 40%;
+    }
+    5% {
+        transform: rotate(10deg);
+        transform: skewX(20deg);
+    }
+    10% {
+        transform: rotate(-10deg);
+        transform: skewX(-20deg);
+    }
+    25% {
+        left: 80%;
+        top: 10%;
+        transform: rotate(45deg);
+        transform: skewX(20deg);
+    }
+    35% {
+        transform: rotate(-15deg);
+        transform: skewX(35deg);
+    }
+    45% {
+        transform: rotate(25deg);
+        transform: skewX(-15deg);
+    }
+
+    50% {
+        left: 65%;
+        top: 45%;
+        transform: rotate(-20deg);
+        transform: skewX(30deg);
+    }
+
+    100% {
+        left: 30%;
+        top: 15%;
+        transform: skewX(-15deg);
+    }
 }
 
 .dj {
@@ -72,7 +176,33 @@ text-align:center;
     width: 100%;
     background-image: url('ayla.png');
     background-repeat: no-repeat;
+    animation-name: ayla;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
 }
+
+@keyframes ayla {
+    0% {
+        left: 20%;
+        top:5%;
+    }
+    25% {
+        left:5%;
+        top:20%;
+    }
+
+    50% {
+        right:50%;
+        top:1%;
+    }
+    100%{
+        right:80%;
+        top:60%;
+    }
+}
+
 .ruteA, .ruteB
 {
     box-sizing:border-box;

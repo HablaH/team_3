@@ -1,5 +1,5 @@
 var diskoEnabled = false;
-var colors = ['Chartreuse', 'BlueViolet', 'Crimson', 'DarkOliveGreen', 'DarkGoldenRod', 'DarkSalmon', 'FireBrick', 'GreenYellow', 'HotPink', 'LemonChiffon', 'MediumSpringGreen', 'MediumTurquoise', 'MediumVioletRed', 'PowderBlue', 'PaleVioletRed', 'Tomato'];
+var colors = ['Chartreuse', 'BlueViolet', 'Crimson', 'DarkOliveGreen', 'DarkGoldenRod', 'DarkSalmon', 'FireBrick', 'GreenYellow', 'HotPink', 'LemonChiffon', 'MediumSpringGreen', 'MediumTurquoise', 'MediumVioletRed', 'PowderBlue', 'PaleVioletRed', 'Tomato', 'Lime', 'Fuchsia'];
 var music = document.getElementById('music');
 var art = document.getElementById('art');
 
@@ -17,13 +17,14 @@ function diskoToggle()
 	{
 		diskoEnabled = false;
 		music.pause();
-		art.style.opacity = 0;
+		art.style.display = 'none';
 	}
 	else
 	{
 		diskoEnabled = true;
 		music.play();
-		art.style.opacity = 100;
+		music.volume = 0.5;
+		art.style.display = 'block';
     }
 }
 
