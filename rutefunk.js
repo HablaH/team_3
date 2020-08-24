@@ -13,11 +13,17 @@ function RandomColor(element)
 
 function diskoToggle()
 {
+	// Toggle kuler
+	var a = document.getElementById('diskoballA');
+	var b = document.getElementById('diskoballB');
+
 	if (diskoEnabled == true)
 	{
 		diskoEnabled = false;
 		music.pause();
 		art.style.display = 'none';
+		a.style.display = 'none';
+		b.style.display = 'none';
 	}
 	else
 	{
@@ -25,13 +31,15 @@ function diskoToggle()
 		music.play();
 		music.volume = 0.5;
 		art.style.display = 'block';
+		a.style.display = 'block';
+		b.style.display = 'block';
     }
 }
 
 function diskoMode()
 {
 	if (diskoEnabled)
-	{
+	{		
 		for (var i = 0; i < 9; i++)
 		{
 			RandomColor(document.getElementById(i));

@@ -34,18 +34,18 @@ text-align:center;
     height: 100%; 
     width:100%;
 }
-.mads 
-{
+.mads {
+    z-index: 6;
     left: 75%;
     top: 10%;
     height: 100%;
     width: 100%;
     background-image: url('mads.png');
     background-repeat: no-repeat;
-    animation-name:mads;
-    animation-duration:12s;
-    animation-iteration-count:infinite;
-    animation-direction:alternate;
+    animation-name: mads;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
     animation-timing-function: linear;
 }
 
@@ -79,43 +79,82 @@ text-align:center;
         transform: rotate(-10deg);
     }
 }
-.diskoball {
-    background-image: url('diskoball.png');
+.diskoballA, .diskoballB 
+{
+    display:none;
     top: 50%;
     left: 50%;
     height: 100%;
     width: 100%;
-    transform:scale(25%);
+    transform: scale(100%);
+    position:absolute;
     background-repeat: no-repeat;
-    animation-name: diskoball;
     animation-iteration-count: 1;
-    animation-duration: 4s;
+    left: 43%;
+    top: -5%;
 }
 
-@keyframes diskoball
-{
+.diskoballA {
+    animation-duration: 4s;
+    animation-name: diskoball1;
+    background-image: url("diskoball.png");
+    z-index: 3;
+}
+
+.diskoballB {
+    opacity: 0;
+    animation-delay: 4s;
+    animation-duration: 3s;
+    animation-direction: reverse;
+    animation-iteration-count:infinite;
+    animation-name: diskoball2;
+    background-image: url("diskoball2.png");
+    z-index: 4;
+}
+
+@keyframes diskoball1 {
     0% 
     {
-        left:50%;
-        top:50%;
+        opacity: 0;
+        left: 43%;
+        top: -20%;
     }
 
     100% 
     {
-        left:100%;
-        top:100%;
+        left: 43%;
+        top: -5%;
+        opacity: 1;
+        animation-play-state: running;
     }
 }
+@keyframes diskoball2 {
+    0% 
+    {
+        opacity: 0;
+    }
+
+    50% 
+    {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 .seline {
+    z-index: 6;
     left: 50%;
     height: 415px;
     width: 298px;
     background-image: url('seline.png');
     background-repeat: no-repeat;
-    animation-name:seline;
-    animation-duration:2s;
-    animation-iteration-count:infinite;
-    animation-direction:alternate;
+    animation-name: seline;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 @keyframes seline {
     0% {
@@ -142,6 +181,7 @@ text-align:center;
 
 
 .harald {
+    z-index: 6;
     left: 30%;
     top: 40%;
     height: 256px;
@@ -153,7 +193,7 @@ text-align:center;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
-    animation-timing-function:cubic-bezier(.57,.94,.93,.09)
+    animation-timing-function: cubic-bezier(.57,.94,.93,.09)
 }
 @keyframes harald {
     0% {
@@ -198,11 +238,13 @@ text-align:center;
 }
 
 .dj {
-    left: 33%;
-    height: 128px;
-    width: 256px;
+    top: 0%;
+    left: 27%;
+    height: 100%;
+    width: 100%;
     background-image: url('dj.png');
     background-repeat: no-repeat;
+    z-index: 5;
 }
 
 .ayla {
@@ -213,29 +255,41 @@ text-align:center;
     background-image: url('ayla.png');
     background-repeat: no-repeat;
     animation-name: ayla;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
+    z-index: 6;
 }
 
 @keyframes ayla {
     0% {
-        left: 20%;
-        top:5%;
+        left: 3%;
+        top:10%;
     }
-    25% {
-        left:5%;
+    
+    20% {
+        left:40%;
+        top:50%;
+    }
+   
+    40% {
+        right: 20%;
         top:20%;
     }
 
-    50% {
-        right:50%;
-        top:1%;
+    60%{
+        left:5%;
+        top:40%;
+    }
+
+    80%{
+        left:30%;
+        top:50%;
     }
     100%{
-        right:80%;
-        top:60%;
+        right:60%;
+        top:10%;
     }
 }
 
