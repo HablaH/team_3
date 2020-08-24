@@ -6,6 +6,7 @@ body
     height:100vh;
     width:100vw;
     background-color: tan;
+    position:relative;
 }
 
 h1, h2, h3{
@@ -28,9 +29,13 @@ text-align:center;
 }
 .art 
 {
-    
+    position:absolute; 
+    display:none; 
+    height: 100%; 
+    width:100%;
 }
-.mads {
+.mads 
+{
     left: 75%;
     top: 10%;
     height: 100%;
@@ -43,33 +48,64 @@ text-align:center;
     animation-direction:alternate;
     animation-timing-function: linear;
 }
+
 @keyframes mads 
 {
     0% 
     {
-        left:75%;
-        top:10%;
+        left: 75%;
+        top: 10%;
+        transform: rotate(+10deg);
     }
 
     25% 
     {
         left: 80%;
         top: 15%;
+        transform: rotate(-10deg);
     }
 
     50% 
     {
         left: 20%;
         top: 50%;
+        transform: rotate(+10deg);
     }
 
     100% 
     {
-        left:50%;
-        top:5%;
+        left: 50%;
+        top: 5%;
+        transform: rotate(-10deg);
     }
 }
+.diskoball {
+    background-image: url('diskoball.png');
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    transform:scale(25%);
+    background-repeat: no-repeat;
+    animation-name: diskoball;
+    animation-iteration-count: 1;
+    animation-duration: 4s;
+}
 
+@keyframes diskoball
+{
+    0% 
+    {
+        left:50%;
+        top:50%;
+    }
+
+    100% 
+    {
+        left:100%;
+        top:100%;
+    }
+}
 .seline {
     left: 50%;
     height: 415px;
@@ -219,4 +255,61 @@ text-align:center;
     width:100px;
     margin:auto;
     
+}
+
+.diskoEffekt
+{
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    animation-name:diskoEffekt;
+    animation-duration:4s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-direction:reverse;
+}
+
+@keyframes diskoEffekt 
+{
+    0% 
+    {
+        background-image:url("sceneEffekt1.png");
+        opacity:1;
+    }
+
+    12.5% 
+    {
+        opacity:0;
+    }
+
+    25% 
+    {
+        background-image: url("sceneEffekt2.png");
+        opacity: 1;
+    }
+
+    37.5% 
+    {
+        opacity: 0;
+    }
+
+    50% 
+    {
+        opacity: 1;
+        background-image: url("sceneEffekt3.png");
+    }
+
+    62.5% 
+    {
+        opacity: 0;
+    }
+
+    100% 
+    {
+        opacity:1;
+        background-image: url("sceneEffekt4.png");
+    }
 }
