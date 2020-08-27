@@ -1,0 +1,52 @@
+﻿body
+{
+	background-color:tan;
+	height: 100vh;
+	width: 100vw;
+	margin:0;
+}
+
+h2
+{
+	text-align:center;
+	text-decoration: underline;
+	font-size: 40px;
+	
+}
+
+div
+{
+	border: solid black 1px;
+}
+
+.rute{
+
+}
+
+.puslebrikke {
+	margin: auto;
+	height: 100%;
+	width: 100%;
+}
+.grid {
+	margin:auto;
+	width: 800px;
+	height: 450px;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas: 'rute1 rute2 rute3 rute4' 'rute5 rute6 rute7 rute8' 'rute9 rute10 rute11 rute12' 'rute13 rute14 rute15 rute16';
+}
+
+.bilder {
+	border-style: dashed;
+	margin: auto;
+	width: 1050px;
+	height: 200px;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas: 'bilde1 bilde10 bilde11 bilde12 bilde13 bilde14 bilde15 bilde16' 'bilde2 bilde3 bilde4 bilde5 bilde6 bilde7 bilde8 bilde9';
+}
+
+	
