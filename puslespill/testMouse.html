@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<style>
+	body 
+	{
+		height:100vh;
+		width:100vw;
+		background-color:tan;
+	}
+
+	.test 
+	{
+		height:100px;
+		width:100px;
+		border:2px solid black;
+	}
+
+</style>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body ondragend="DragEnd();">
+	<div class="test" style="background-color:red;" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true"></div>
+	<div class="test" style="background-color:blue;" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true"></div>
+	<div class="test" style="background-color:green;" ondragover="MouseOver(this);" ondragstart="DragStart(this);"  draggable="true"></div>
+</body>
+</html>
+<script>
+	var dragElement = null; // start drag element
+	var endElement = null;	// end drag element
+
+	function MouseOver(element)
+	{
+		if (element == dragElement) {
+			return;
+		}
+		else
+		{
+			endElement = element;
+			//console.log("End: " + endElement.style.backgroundColor);
+		}
+	}
+
+	function DragStart(element)
+	{
+		dragElement = element;
+		//console.log("Start: " + element.style.backgroundColor);
+	}
+
+	function DragEnd()
+	{
+		//console.log((dragElement));
+		//console.log((endElement));
+		//console.log('Set elements');
+
+		if (dragElement != null && endElement != null)
+		{
+			var dragColor = dragElement.style.backgroundColor;
+			var endColor = endElement.style.backgroundColor;
+
+			dragElement.style.backgroundColor = endColor;
+			endElement.style.backgroundColor = dragColor;
+		}
+
+		dragElement = null;
+		endElement = null;
+	}	
+</script>

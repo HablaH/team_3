@@ -6,78 +6,46 @@
     <title>puslespill</title>
     <link rel="stylesheet" href="puslestil.css">
 </head>
-<body>
+<body ondragend="DragEnd();">
     <h2> Puslespill</h2>
     <div class="grid">
-        <div class="rute" style="grid-area:rute1" ondrop="testDrop(event)" ondragover="allowDrop(event)"></div>
-        <div class="rute" style="grid-area:rute2" ondrop="testDrop(event)" ondragover="allowDrop(event)"></div>
-        <div class="rute" style="grid-area:rute3" ondrop="testDrop(event)" ondragover="allowDrop(event)"></div>
-        <div class="rute" style="grid-area:rute4" ondrop="testDrop(event)" ondragover="allowDrop(event)"></div>
-        <div class="rute" style="grid-area:rute5" ondrop="testDrop(event)" ondragover="allowDrop(event)"></div>
-        <div class="rute" style="grid-area:rute6" ondrop="testDrop(event)" ondragover="allowDrop(event)"></div>
-        <div class="rute" style="grid-area:rute7" ondrop="testDrop(event)" ondragover="allowDrop(event)"></div>
-        <div class="rute" style="grid-area:rute8" ondrop="testDrop(event)" ondragover="allowDrop(event)"></div>
-        <div class="rute" style="grid-area:rute9" ondrop="testDrop(event)" ondragover="allowDrop(event)"></div>
-        <div class="rute" style="grid-area:rute10" ondrop="testDrop(event)" ondragover="allowDrop(event)"></div>
-        <div class="rute" style="grid-area:rute11" ondrop="testDrop(event)" ondragover="allowDrop(event)"></div>
-        <div class="rute" style="grid-area:rute12" ondrop="testDrop(event)" ondragover="allowDrop(event)"></div>
-        <div class="rute" style="grid-area:rute13" ondrop="testDrop(event)" ondragover="allowDrop(event)"></div>
-        <div class="rute" style="grid-area:rute14" ondrop="testDrop(event)" ondragover="allowDrop(event)"></div>
-        <div class="rute" style="grid-area:rute15" ondrop="testDrop(event)" ondragover="allowDrop(event)"></div>
-        <div class="rute" style="grid-area:rute16" ondrop="testDrop(event)" ondragover="allowDrop(event)"></div>
+        <div class="rute" style="background-image: url('tom.png'); grid-area:rute1" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true">url("puslebiter/bit1.jpg")</div>
+        <div class="rute" style="background-image: url('tom.png'); grid-area:rute2" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true">url("puslebiter/bit2.jpg")</div>
+        <div class="rute" style="background-image: url('tom.png'); grid-area:rute3" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true">url("puslebiter/bit3.jpg")</div>
+        <div class="rute" style="background-image: url('tom.png'); grid-area:rute4" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true">url("puslebiter/bit4.jpg")</div>
+        <div class="rute" style="background-image: url('tom.png'); grid-area:rute5" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true">url("puslebiter/bit5.jpg")</div>
+        <div class="rute" style="background-image: url('tom.png'); grid-area:rute6" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true">url("puslebiter/bit6.jpg")</div>
+        <div class="rute" style="background-image: url('tom.png'); grid-area:rute7" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true">url("puslebiter/bit7.jpg")</div>
+        <div class="rute" style="background-image: url('tom.png'); grid-area:rute8" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true">url("puslebiter/bit8.jpg")</div>
+        <div class="rute" style="background-image: url('tom.png'); grid-area:rute9" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true">url("puslebiter/bit9.jpg")</div>
+        <div class="rute" style="background-image: url('tom.png'); grid-area:rute10" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true">url("puslebiter/bit10.jpg")</div>
+        <div class="rute" style="background-image: url('tom.png'); grid-area:rute11" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true">url("puslebiter/bit11.jpg")</div>
+        <div class="rute" style="background-image: url('tom.png'); grid-area:rute12" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true">url("puslebiter/bit12.jpg")</div>
+        <div class="rute" style="background-image: url('tom.png'); grid-area:rute13" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true">url("puslebiter/bit13.jpg")</div>
+        <div class="rute" style="background-image: url('tom.png'); grid-area:rute14" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true">url("puslebiter/bit14.jpg")</div>
+        <div class="rute" style="background-image: url('tom.png'); grid-area:rute15" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true">url("puslebiter/bit15.jpg")</div>
+        <div class="rute" style="background-image: url('tom.png'); grid-area:rute16" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true">url("puslebiter/bit16.jpg")</div>
     </div>
 
     <hr/>
 
     <div class="bilder">
-        <div class="puslebrikke" style="grid-area: bilde16;" ondrop="testDrop(event)" ondragover="allowDrop(event)">
-            <img src="puslebiter/bit1.jpg" draggable="true" ondragstart="testDrag(event)" id="drag1" width="100%" />
-        </div>
-        <div class="puslebrikke" style="grid-area: bilde15;" ondrop="testDrop(event)" ondragover="allowDrop(event)">
-            <img src="puslebiter/bit10.jpg" draggable="true" ondragstart="testDrag(event)" id="drag2" width="100%" />
-        </div>
-        <div class="puslebrikke" style="grid-area: bilde14;" ondrop="testDrop(event)" ondragover="allowDrop(event)">
-            <img src="puslebiter/bit11.jpg" draggable="true" ondragstart="testDrag(event)" id="drag3" width="100%" />
-        </div>
-        <div class="puslebrikke" style="grid-area: bilde13;" ondrop="testDrop(event)" ondragover="allowDrop(event)">
-            <img src="puslebiter/bit12.jpg" draggable="true" ondragstart="testDrag(event)" id="drag4" width="100%" />
-        </div>
-        <div class="puslebrikke" style="grid-area: bilde12;" ondrop="testDrop(event)" ondragover="allowDrop(event)">
-            <img src="puslebiter/bit13.jpg" draggable="true" ondragstart="testDrag(event)" id="drag5" width="100%" />
-        </div>
-        <div class="puslebrikke" style="grid-area: bilde11;" ondrop="testDrop(event)" ondragover="allowDrop(event)">
-            <img src="puslebiter/bit14.jpg" draggable="true" ondragstart="testDrag(event)" id="drag6" width="100%" />
-        </div>
-        <div class="puslebrikke" style="grid-area: bilde10;" ondrop="testDrop(event)" ondragover="allowDrop(event)">
-            <img src="puslebiter/bit15.jpg" draggable="true" ondragstart="testDrag(event)" id="drag7" width="100%" />
-        </div>
-        <div class="puslebrikke" style="grid-area: bilde9;" ondrop="testDrop(event)" ondragover="allowDrop(event)">
-            <img src="puslebiter/bit16.jpg" draggable="true" ondragstart="testDrag(event)" id="drag8" width="100%" />
-        </div>
-        <div class="puslebrikke" style="grid-area: bilde8;" ondrop="testDrop(event)" ondragover="allowDrop(event)">
-            <img src="puslebiter/bit2.jpg" draggable="true" ondragstart="testDrag(event)" id="drag9" width="100%" />
-        </div>
-        <div class="puslebrikke" style="grid-area: bilde7;" ondrop="testDrop(event)" ondragover="allowDrop(event)">
-            <img src="puslebiter/bit3.jpg" draggable="true" ondragstart="testDrag(event)" id="drag10" width="100%" />
-        </div>
-        <div class="puslebrikke" style="grid-area: bilde6;" ondrop="testDrop(event)" ondragover="allowDrop(event)">
-            <img src="puslebiter/bit4.jpg" draggable="true" ondragstart="testDrag(event)" id="drag11" width="100%" />
-        </div>
-        <div class="puslebrikke" style="grid-area: bilde5;" ondrop="testDrop(event)" ondragover="allowDrop(event)">
-            <img src="puslebiter/bit5.jpg" draggable="true" ondragstart="testDrag(event)" id="drag12" width="100%" />
-        </div>
-        <div class="puslebrikke" style="grid-area: bilde4;" ondrop="testDrop(event)" ondragover="allowDrop(event)">
-            <img src="puslebiter/bit6.jpg" draggable="true" ondragstart="testDrag(event)" id="drag13" width="100%" />
-        </div>
-        <div class="puslebrikke" style="grid-area: bilde3;" ondrop="testDrop(event)" ondragover="allowDrop(event)">
-            <img src="puslebiter/bit7.jpg" draggable="true" ondragstart="testDrag(event)" id="drag14" width="100%" />
-        </div>
-        <div class="puslebrikke" style="grid-area: bilde2;" ondrop="testDrop(event)" ondragover="allowDrop(event)">
-            <img src="puslebiter/bit8.jpg" draggable="true" ondragstart="testDrag(event)" id="drag15" width="100%" />
-        </div>
-        <div class="puslebrikke" style="grid-area: bilde1;" ondrop="testDrop(event)" ondragover="allowDrop(event)">
-            <img src="puslebiter/bit9.jpg" draggable="true" ondragstart="testDrag(event)" id="drag16" width="100%" />
-        </div>
+        <div class="puslebrikke" style="grid-area: bilde16; background-image: url('puslebiter/bit16.jpg');" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true"></div>
+        <div class="puslebrikke" style="grid-area: bilde15; background-image: url('puslebiter/bit15.jpg');" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true"></div>
+        <div class="puslebrikke" style="grid-area: bilde14; background-image: url('puslebiter/bit14.jpg');" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true"></div>
+        <div class="puslebrikke" style="grid-area: bilde13; background-image: url('puslebiter/bit13.jpg');" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true"></div>
+        <div class="puslebrikke" style="grid-area: bilde12; background-image: url('puslebiter/bit12.jpg');" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true"></div>
+        <div class="puslebrikke" style="grid-area: bilde11; background-image: url('puslebiter/bit11.jpg');" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true"></div>
+        <div class="puslebrikke" style="grid-area: bilde10; background-image: url('puslebiter/bit10.jpg');" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true"></div>
+        <div class="puslebrikke" style="grid-area: bilde9; background-image: url('puslebiter/bit9.jpg');" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true"></div>
+        <div class="puslebrikke" style="grid-area: bilde8; background-image: url('puslebiter/bit8.jpg');" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true"></div>
+        <div class="puslebrikke" style="grid-area: bilde7; background-image: url('puslebiter/bit7.jpg');" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true"></div>
+        <div class="puslebrikke" style="grid-area: bilde6; background-image: url('puslebiter/bit6.jpg');" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true"></div>
+        <div class="puslebrikke" style="grid-area: bilde5; background-image: url('puslebiter/bit5.jpg');" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true"></div>
+        <div class="puslebrikke" style="grid-area: bilde4; background-image: url('puslebiter/bit4.jpg');" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true"></div>
+        <div class="puslebrikke" style="grid-area: bilde3; background-image: url('puslebiter/bit3.jpg');" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true"></div>
+        <div class="puslebrikke" style="grid-area: bilde2; background-image: url('puslebiter/bit2.jpg');" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true"></div>
+        <div class="puslebrikke" style="grid-area: bilde1; background-image: url('puslebiter/bit1.jpg');" ondragover="MouseOver(this);" ondragstart="DragStart(this);" draggable="true"></div>
 
     </div>
 
