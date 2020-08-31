@@ -1,6 +1,6 @@
 function testDrag(event)
 {
-	event.dataTransfer.setData("Text", event.target.id);
+	event.dataTransfer.setData("Image", event.target.id);
 }
 function allowDrop(event)
 {
@@ -9,6 +9,6 @@ function allowDrop(event)
 function testDrop(event)
 {
 	event.preventDefault();
-	var data = event.dataTransfer.getData("Text");
+	var data = event.dataTransfer.getData("Image");
 	event.target.appendChild(document.getElementById(data));
 }
