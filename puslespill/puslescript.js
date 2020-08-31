@@ -46,7 +46,9 @@ function DragEnd() {
 
 	}
 
-	if (dragElement != null && endElement != null) {
+	// Switch images
+	if (dragElement != null && endElement != null)
+	{
 		var dragColor = dragElement.style.backgroundImage;
 		var endColor = endElement.style.backgroundImage;
 
