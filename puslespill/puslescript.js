@@ -1,6 +1,7 @@
 
 var dragElement = null; // start drag element
 var endElement = null;	// end drag element
+var riktige = 0;
 
 function MouseOver(element) {
 	if (element == dragElement) {
@@ -43,7 +44,8 @@ function DragEnd() {
 		endElement.style.border = 'none';
 		endElement.draggable = false;
 		endElement.style.userSelect = 'none';
-
+		// Legger til +1 på en variabel som tracker
+		riktige++;
 	}
 
 	// Switch images
@@ -58,11 +60,18 @@ function DragEnd() {
 
 	dragElement = null;
 	endElement = null;
+
+	checkWin();
 }
 
-function OnDragEnd(element)
+function checkWin()
 {
-	if (endElement == element) {
-		endElement = null;
+	// hvis denne variablen er lik størelse på antall pusslebrikker 
+	if (riktige == 16)
+	{
+		// display message
+		var vinn = document.getElementById('vinn');
+		vinn.innerText = 'Gratulerer :)';
+		vinn.style.color = 'green';
 	}
 }

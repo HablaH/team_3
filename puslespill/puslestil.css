@@ -16,7 +16,7 @@ h2
 
 div
 {
-	border: solid black 1px;
+	border: solid black 3px;
 }
 
 .rute 
@@ -25,6 +25,11 @@ div
 	background-repeat: no-repeat;
 	background-size: cover;
 	font-size:0%;
+}
+
+.forsvinn 
+{
+	border: none;
 }
 
 .puslebrikke {
