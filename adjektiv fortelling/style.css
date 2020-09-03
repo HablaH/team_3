@@ -1,3 +1,63 @@
-﻿body
+﻿body {
+	background-color: tan;
+}
+
+#app 
 {
+	margin:0;
+	height: 100vh;
+	width: 100vw;
+	
+}
+p 
+{
+	padding-top: 10%;
+}
+
+div.storyBox {
+	height: 50%;
+	min-height: 512px;
+	margin: auto;
+	background-color: red;
+	text-align: center;
+	font-size: 30px;
+}
+
+div.buttonBox {
+	min-height: 128px;
+	height: 10%;
+	margin: auto;
+	background-color: rgba(0, 0, 0, 0.1);
+	align-content: center;
+	display:table;
+}
+
+div.buttonBox, div.storyBox 
+{
+	width:50%;
+	min-width:512px;
+}
+
+button 
+{
+	height:33%;
+	width:20%;
+	
+}
+
+button.angre 
+{
+	margin: auto;
+	background-image: url("angrePille.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 10%;
+	width: 10%;
+}
+
+.midtstillt 
+{
+	display: flex;
+	align-items: center;
 }
