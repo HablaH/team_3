@@ -1,7 +1,8 @@
 //model
 var tracker = 0;
 var space = ['____', '____', '____', '____', '____', '____', '____'];
-
+var used = [false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+var lagret = [];
 //view
 updateView();
 function updateView()
@@ -15,43 +16,50 @@ function updateView()
             Kaninen pakket sin ${space[6]} bag, og kj&oslash;pte en billett til Mallorca. 
         </p></div>
         <div class="buttonBox">
-        <button onclick="settOrd(this)">pekte</button>
-        <button onclick="settOrd(this)">teit</button>
-        <button onclick="settOrd(this)">feit</button>
-        <button onclick="settOrd(this)">vemelige</button>
-        <button onclick="settOrd(this)">spydde</button>
-        <button onclick="settOrd(this)">gammel</button>
-        <button onclick="settOrd(this)">stor</button>
-        <button onclick="settOrd(this)">stygge</button>
-        <button onclick="settOrd(this)">urolige</button>
-        <button onclick="settOrd(this)">irriterende</button>
-        <button onclick="settOrd(this)">nydelige</button>
-        <button onclick="settOrd(this)">forferdelig</button>
-        <button onclick="settOrd(this)">grei</button>
-        <button onclick="settOrd(this)">h&aring;pl&oslash;s</button>
-        <button onclick="settOrd(this)">stabil</button>
+        ${(!used[0])  ? tegnKnapp('pekte', 0) : ''}
+        ${(!used[1])  ? tegnKnapp('teit', 1) : ''}
+        ${(!used[2])  ? tegnKnapp('feit', 2) : ''}
+        ${(!used[3])  ? tegnKnapp('vemelige', 3) : ''}   
+        ${(!used[4])  ? tegnKnapp('spydde', 4) : ''}
+        ${(!used[5])  ? tegnKnapp('gammel', 5) : ''}    
+        ${(!used[6])  ? tegnKnapp('stor', 6) : ''}
+        ${(!used[7])  ? tegnKnapp('stygge', 7) : ''}
+        ${(!used[8])  ? tegnKnapp('urolige', 8) : ''}
+        ${(!used[9])  ? tegnKnapp('irriterende', 9) : ''}
+        ${(!used[10]) ? tegnKnapp('nydelig', 10) : ''}  
+        ${(!used[11]) ? tegnKnapp('forferdelig', 11) : ''}
+        ${(!used[12]) ? tegnKnapp('grei', 12) : ''}
+        ${(!used[13]) ? tegnKnapp('stabil', 13) : ''}
         </div>
         <button class="angre midtstillt" onclick="angre()"></button>
     `;
 }
 
 //controller
+function tegnKnapp(tekst, index)
+{
+    return '<button onclick="settOrd(this, '+ index +')">' + tekst + '</button>';
+}
 
 // Sett ord til blank
-function settOrd(teksten)
-{   
+function settOrd(teksten, index)
+{
+    used[index] = true;
+
     //Hvis tracker går over 7, blir tracker 7.
-    if (tracker >= space.length) {
+    if (tracker >= space.length)
+    {
         return;
     }
 
-    teksten.style.display = 'none';
-
     // Hent en ting fra arrayen og set det til teksten.
     space[tracker] = teksten.innerText;
-
+    lagret[tracker] = index;
     // Gå opp en verdi på tracker
     tracker++;
+
+    // Tegn view
+    updateView();
 }
 
 
@@ -63,8 +71,11 @@ function angre() { // slette siste ordet
         return;
     }
 
-    //Hent ordet fra array og gjør om til blank
-    space[tracker - 1] = '____';
+    // Hent ordet fra array og gjør om til blank
+    var saved = space[tracker - 1];
+    tegnKnapp(saved);
+    used[] = false;
+    saved = '____';
 
     // Gå ned en verdi på tracker
     tracker--;
@@ -72,4 +83,3 @@ function angre() { // slette siste ordet
     // Tegn view
     updateView();
 }
-
