@@ -1,6 +1,6 @@
 //model
 var tracker = 0;
-var space = ['____', '____', '____', '____', '____', '____', '____'];
+var space = ['&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp', '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'];
 var used = [false, false, false, false, false, false, false, false, false, false, false, false, false, false];
 var lagret = [];
 
@@ -10,11 +10,11 @@ function updateView()
 {
     document.getElementById('app').innerHTML = `
         <div class="storyBox"><p>
-            Det var en gang en ${space[0]} kanin, som ikke hadde kontroll p&aring; livet sitt,<br />
-            Den hadde tjue ${space[1]} barn, tre ${space[2]} koner og en helt ${space[3]} jobb.<br />
-            Den ${space[4]} kaninen hadde ikke noe fritid, og trengte en ${space[5]} ferie.<br /><br />
+            Det var en gang en <u>${space[0]}</u> kanin, som ikke hadde kontroll p&aring; livet sitt,<br />
+            Den hadde tjue <u>${space[1]}</u> barn, tre <u>${space[2]}</u> koner og en helt <u>${space[3]}</u> jobb.<br />
+            Den <u>${space[4]}</u> kaninen hadde ikke noe fritid, og trengte en <u>${space[5]}</u> ferie.<br /><br />
 
-            Kaninen pakket sin ${space[6]} bag, og kj&oslash;pte en billett til Mallorca. 
+            Kaninen pakket sin <u>${space[6]}</u> bag, og kj&oslash;pte en billett til Mallorca. 
         </p></div>
         <div class="buttonBox">
         ${(!used[0])  ? tegnKnapp('pekte', 0) : ''}
@@ -45,14 +45,14 @@ function tegnKnapp(tekst, index)
 // Sett ord til blank
 function settOrd(teksten, index)
 {
-    used[index] = true;
+    
 
     //Hvis tracker går over 7, blir tracker 7.
     if (tracker >= space.length)
     {
         return;
     }
-
+used[index] = true;
     // Hent en ting fra arrayen og set det til teksten.
     space[tracker] = teksten.innerText;
     lagret[tracker] = index;
@@ -77,11 +77,11 @@ function angre() { // slette siste ordet
 
     // endre verdien i used til false
     var siste = lagret.slice(lagret.length - 1);
-    //var siste2 = lagret2.slice(lagret2.length - 1);
     lagret.pop();
     used.splice(siste, 1, false);
-    //lagret2.pop();
-    space[tracker-1] = "____"    
+
+    //ord tilbake til blank
+    space[tracker - 1] = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"    
     
     // Gå ned en verdi på tracker
     tracker--;
