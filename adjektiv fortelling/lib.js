@@ -1,8 +1,9 @@
 //model
 var tracker = 0;
 var space = ['____', '____', '____', '____', '____', '____', '____'];
-var used = [false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+var used = [false, false, false, false, false, false, false, false, false, false, false, false, false, false];
 var lagret = [];
+
 //view
 updateView();
 function updateView()
@@ -72,11 +73,16 @@ function angre() { // slette siste ordet
     }
 
     // Hent ordet fra array og gjør om til blank
-    var saved = space[tracker - 1];
-    tegnKnapp(saved);
-    used[] = false;
-    saved = '____';
+    
 
+    // endre verdien i used til false
+    var siste = lagret.slice(lagret.length - 1);
+    //var siste2 = lagret2.slice(lagret2.length - 1);
+    lagret.pop();
+    used.splice(siste, 1, false);
+    //lagret2.pop();
+    space[tracker-1] = "____"    
+    
     // Gå ned en verdi på tracker
     tracker--;
 
