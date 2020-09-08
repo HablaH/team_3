@@ -31,8 +31,9 @@ function updateView()
         ${(!used[11]) ? tegnKnapp('forferdelig', 11) : ''}
         ${(!used[12]) ? tegnKnapp('grei', 12) : ''}
         ${(!used[13]) ? tegnKnapp('stabil', 13) : ''}
-        </div>
-        <button class="angre midtstillt" onclick="angre()"></button>
+        </div><br/>
+        <div class="midtstillt"><button class="angre" onclick="angre()"></button>
+        <div><b>Angrepille</b></div></div>
     `;
 }
 
@@ -54,7 +55,7 @@ function settOrd(teksten, index)
     }
     used[index] = true;
     // Hent en ting fra arrayen og set det til teksten.
-    space[tracker] = teksten.innerText;
+    space[tracker] = '<mark><u>' + teksten.innerText + '</u></mark>';
     lagret[tracker] = index;
     // Gå opp en verdi på tracker
     tracker++;
