@@ -9,7 +9,7 @@ updateView();
 function updateView()
 {
     document.getElementById('app').innerHTML = `
-        <div class="storyBox"><p>
+        <div class="storyBox" style="margin-top:5%;"><p>
             Det var en gang en <u>${space[0]}</u> kanin, som ikke hadde kontroll p&aring; livet sitt,<br />
             Den hadde tjue <u>${space[1]}</u> barn, tre <u>${space[2]}</u> koner og en helt <u>${space[3]}</u> jobb.<br />
             Den <u>${space[4]}</u> kaninen hadde ikke noe fritid, og trengte en <u>${space[5]}</u> ferie.<br /><br />
