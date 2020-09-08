@@ -17,11 +17,11 @@ function updateView()
             Kaninen pakket sin <u>${space[6]}</u> bag, og kj&oslash;pte en billett til Mallorca. 
         </p></div>
         <div class="buttonBox">
-        ${(!used[0])  ? tegnKnapp('pekte', 0) : ''}
+        ${(!used[0])  ? tegnKnapp('lilla', 0) : ''}
         ${(!used[1])  ? tegnKnapp('teit', 1) : ''}
         ${(!used[2])  ? tegnKnapp('feit', 2) : ''}
         ${(!used[3])  ? tegnKnapp('vemelige', 3) : ''}   
-        ${(!used[4])  ? tegnKnapp('spydde', 4) : ''}
+        ${(!used[4])  ? tegnKnapp('spygr&oslash;nne', 4) : ''}
         ${(!used[5])  ? tegnKnapp('gammel', 5) : ''}    
         ${(!used[6])  ? tegnKnapp('stor', 6) : ''}
         ${(!used[7])  ? tegnKnapp('stygge', 7) : ''}
@@ -52,7 +52,7 @@ function settOrd(teksten, index)
     {
         return;
     }
-used[index] = true;
+    used[index] = true;
     // Hent en ting fra arrayen og set det til teksten.
     space[tracker] = teksten.innerText;
     lagret[tracker] = index;
@@ -81,7 +81,7 @@ function angre() { // slette siste ordet
     used.splice(siste, 1, false);
 
     //ord tilbake til blank
-    space[tracker - 1] = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"    
+    space[tracker - 1] = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";    
     
     // Gå ned en verdi på tracker
     tracker--;
