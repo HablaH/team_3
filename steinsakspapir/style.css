@@ -8,6 +8,7 @@
     display: flex;
     align-items:center;
 }
+
 .screen
 {
     display: flex;
@@ -140,9 +141,11 @@ button.choice:hover
 
 }
 .jukseknapp button {
+    margin: 0% 2%;
     color:snow;
-    font-size:200%;
-    width: 100%;
+    font-size:100%;
+    float: left;
+    width: 45%;
     height: 100%;
     background-color: rgba(211, 137, 34, 0.66);
     border-top: 4px solid rgba(0, 0, 0, 0.25);
@@ -152,7 +155,7 @@ button.choice:hover
 }
 .jukseknapp {
     margin: auto;
-    width: 30%;
+    width: 50%;
     height: 10%;  
 }
 .wScreen
@@ -175,4 +178,7 @@ p
     text-shadow: 4px 4px rgba(0, 0, 0, 0.2);
     font-size:300%;
     margin:auto;
+}
+.help {
+    top:2%;
 }
