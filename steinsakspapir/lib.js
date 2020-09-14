@@ -1,7 +1,7 @@
 // Model
 var valgt, valgtBot;
 var imageArray = ['Images/fish.png', 'Images/turtle.png', 'Images/lion.png', 'Images/seline.png'];
-var lydArray =   ['Audio/fish.m4a', 'Audio/turtle.m4a', 'Audio/lion.m4a', 'Audio/ugh.m4a', 'Audio/yay.m4a', 'Audio/buu.m4a', 'Audio/huh.m4a'];
+var lydArray = ['Audio/fish.mp3', 'Audio/turtle.mp3', 'Audio/lion.mp3', 'Audio/ugh.mp3', 'Audio/yay.mp3', 'Audio/buu.mp3', 'Audio/huh.mp3'];
 var bruktJuks = false;
 var resultat = 'Choose something';
 var anim = false;
