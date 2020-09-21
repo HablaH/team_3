@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2f5362;
+        stroke: #1a2f38;
+        stroke-width: 4px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Arrow_1" data-name="Arrow 1" class="cls-1" d="M40.96,64L0,32,40.96,0V17.5H64v30H40.96V64Z"/>
+</svg>

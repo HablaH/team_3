@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="drawView();">
+	<div id="app"></div>
+
+	<script>
+		//model
+        const lydlisteA = ['Audio/1.mp3', 'Audio/2.mp3', 'Audio/3.mp3'];
+		const lydlisteB = ['Audio/4.mp3', 'Audio/5.mp3', 'Audio/6.mp3'];
+        const indekser = [];
+        const indekserArray = []; 
+		// View
+		function drawView()
+		{
+			document.getElementById('app').innerHTML =
+			`
+				<div class="header">
+					<button class="playButton" style="border-right:snow 4px solid">Play</button>
+					<div class="timeline">
+						<div class="timelineContent"><p class="ordliste">[OrdA] [OrdB] [OrdC]</p></div>
+					</div>
+					<button class="removeButton" style="border-left:snow 4px solid">Remove</button>
+				</div>
+				<div class="content">
+					<div class="characterA"></div>
+					<div class="characterB"></div>
+				</div>
+				<div class="footer">
+					<div class="containerL">
+					</div>
+					<div class="containerR"></div>
+				</div>
+			`;
+		}
+
+        // Playsound
+        function playSound(url) {
+            var source = new Audio(url);
+            source.play();
+        }
+
+        // PlaySoundArray----- funker med loop
+		function playSoundArray(array) {
+
+			var audio = new Audio(),
+				i = 0;
+			var playlist = lydlisteA;
+
+			audio.addEventListener('ended', function ()
+			{
+                i = ++i < playlist.length ? i : '';
+                console.log(i)
+                audio.src = playlist[i];
+                audio.play();
+            }, false);
+            audio.volume = 0.3;
+            audio.loop = false;
+            audio.src = playlist[0];
+            audio.play();
+		
+		}
+		//play---- funker
+		function playArray(array) {
+			var i = 1;
+            var testLyd = new testLyd(array[0]);
+			
+            testLyd.onended = function () {
+				if (i < array.length) { 
+                    testLyd.src = array[i];
+                    testLyd.play();
+                    i++;
+                }
+			}
+		}
+		
+	</script>
+</body>
+</html>
