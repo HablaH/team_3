@@ -4,7 +4,7 @@ const playerHealthMax = 100;
 let npcHealth = 250;
 const npcHealthMax = 250;
 let end;
-const npcBilder = ["url('bilder/Terje2.png')", "url('bilder/TerjeLowHP.png')"];
+const npcBilder = ["url('bilder/TerjeFullHP.png')", "url('bilder/TerjeLowHP.png')", "url('bilder/TerjeNoHP.png')"];
 const playerBilder = ["url('bilder/AylaFullHP.png')", "url('bilder/AylaLowHP.png')", "url('bilder/AylaNoHP.png')" ];
 const bilde = document.documentElement.style;
 
@@ -12,7 +12,7 @@ const bilde = document.documentElement.style;
 show();
 function show()
 {
-    const ended = ((end == 'taper') || (end == 'yey')) ? 'disabled' : '';
+    
     let winner = winCheck();
     document.getElementById('app').innerHTML = 
         ` 
@@ -24,12 +24,11 @@ function show()
             <div class="playerHp"><div class="hpBar" style="width: ${playerHealth}%; background-color: #4CAF50;">${playerHealth}</div></div>
             <div class="npcHp"><div class="hpBar" style="width: ${prosenter(npcHealth, npcHealthMax)}%; background-color: #4CAF50;">${npcHealth}</div></div>
             <div class="VS">${winner}</div>
-            <div class="attack"><button onclick="attack()" ${ended}>ATTACK</button></div>
+            <div class="attack" onclick="attack()"></div>
         </div>
         `;
 }
-//player:<progress id="healthPlayer" value="${playerHealth}" max="100"></progress>${playerHealth}
-//controller
+
 
 
 function checkHealthNpc() {
@@ -80,7 +79,7 @@ function checkHealthPlayer() {
 
 function attack()
 {
-    
+    if ((end == 'taper') || (end == 'yey')) return;
     npcHealth = npcHealth - playerAttack();
     npcHealth <= 0 ? npcHealth = 0 : npcHealth;
         checkHealthNpc();
@@ -99,7 +98,7 @@ function playerAttack()
 {
     const playerDmg = Math.floor(Math.random() * 10) + 1; 
     const critChance = Math.floor(Math.random() * 100);
-    if (critChance <= 50 && critChance >= 0)
+    if (critChance <= 45 && critChance >= 0)
     {
         console.log('crit ' + (playerDmg * 2))
         return (playerDmg * 2);
@@ -112,7 +111,7 @@ function npcAttack()
 {
     const npcDmg = Math.floor(Math.random() * 15) + 1;
     const missChance = Math.floor(Math.random() * 100);
-    if (missChance <= 50 && missChance >= 0) {
+    if (missChance <= 40 && missChance >= 0) {
         console.log('miss')
         return (npcDmg * 0);
     }
