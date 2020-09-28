@@ -4,8 +4,8 @@ const playerHealthMax = 100;
 let npcHealth = 250;
 const npcHealthMax = 250;
 let end;
-const npcBilder = ["url('bilder/TerjeFullHP.png')", "url('bilder/TerjeLowHP.png')", "url('bilder/TerjeNoHP.png')"];
-const playerBilder = ["url('bilder/AylaFullHP.png')", "url('bilder/AylaLowHP.png')", "url('bilder/AylaNoHP.png')" ];
+const npcBilder = ["url('Bilder/TerjeFullHP.png')", "url('Bilder/TerjeLowHP.png')", "url('Bilder/TerjeNoHP.png')"];
+const playerBilder = ["url('Bilder/AylaFullHP.png')", "url('Bilder/AylaLowHP.png')", "url('Bilder/AylaNoHP.png')" ];
 const bilde = document.documentElement.style;
 
 //view
