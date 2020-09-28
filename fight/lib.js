@@ -4,6 +4,8 @@ const playerHealthMax = 100;
 let npcHealth = 250;
 const npcHealthMax = 250;
 let end;
+const bilder1 = ['Bilder/TerjeFullHP.png', 'Bilder/TerjeLowHP.png', 'Bilder/TerjeNoHP.png']
+const bilder2 = ['Bilder/AylaFullHP.png', 'Bilder/AylaLowHP.png', 'Bilder/AylaNoHP.png']
 const npcBilder = ["url('Bilder/TerjeFullHP.png')", "url('Bilder/TerjeLowHP.png')", "url('Bilder/TerjeNoHP.png')"];
 const playerBilder = ["url('Bilder/AylaFullHP.png')", "url('Bilder/AylaLowHP.png')", "url('Bilder/AylaNoHP.png')" ];
 const bilde = document.documentElement.style;
