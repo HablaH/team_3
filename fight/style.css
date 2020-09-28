@@ -113,7 +113,7 @@ body {
     height: 50%;
     grid-row: 4/4;
     grid-column: 2/2;
-    background-image: url('bilder/attack.png');
+    background-image: url('Bilder/attack.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
