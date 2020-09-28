@@ -3,15 +3,13 @@
     --npcbilde: url('Bilder/TerjeFullHP.png');
 }
 
-body 
-{
-    zoom:normal;
-    overflow:hidden;
-    background-image: url('bilder/bakgrunn2.png');
+body {
+    zoom: normal;
+    overflow: hidden;
+    background-image: url('Bilder/bakgrunn2.png');
     background-size: cover;
     background-repeat: no-repeat;
-    user-select:none;
-
+    user-select: none;
 }
 
 
